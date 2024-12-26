@@ -1,9 +1,29 @@
 # Oh-my-zsh installation path
-ZSH=/usr/share/oh-my-zsh/
+export ZSH="$HOME/.oh-my-zsh"
+
+# Source antigen
+source ~/.antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
 
 # Powerlevel10k theme path
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 # List of plugins used
 plugins=()
 source $ZSH/oh-my-zsh.sh
@@ -87,3 +107,5 @@ alias mkdir='mkdir -p'
 
 # Display Pokemon
 pokemon-colorscripts --no-title -r 1,3,6
+
+eval "$(starship init zsh)"

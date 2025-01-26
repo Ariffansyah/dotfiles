@@ -109,3 +109,19 @@ alias mkdir='mkdir -p'
 pokemon-colorscripts --no-title -r 1,3,6
 
 eval "$(starship init zsh)"
+
+
+
+# bun completions
+[ -s "/home/arpthef/.bun/_bun" ] && source "/home/arpthef/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+#android sdk
+export ANDROID_HOME=$HOME/android/sdk
+export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
+export PATH=$ANDROID_HOME/emulator/:$PATH
+export PATH=$ANDROID_HOME/platform-tools/:$PATH

@@ -125,3 +125,11 @@ export ANDROID_HOME=$HOME/android/sdk
 export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
 export PATH=$ANDROID_HOME/emulator/:$PATH
 export PATH=$ANDROID_HOME/platform-tools/:$PATH
+
+#java home
+export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk/
+export PATH=$JAVA_HOME/bin:$PATH
+
+#flutter
+export PATH="$HOME/flutter/bin:$PATH"
+

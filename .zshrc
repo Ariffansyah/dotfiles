@@ -127,9 +127,15 @@ export PATH=$ANDROID_HOME/emulator/:$PATH
 export PATH=$ANDROID_HOME/platform-tools/:$PATH
 
 #java home
-export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk/
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-21.0.6.0.7-1.fc41.x86_64/
 export PATH=$JAVA_HOME/bin:$PATH
 
 #flutter
 export PATH="$HOME/flutter/bin:$PATH"
 
+#sdk
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

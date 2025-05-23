@@ -108,29 +108,9 @@ alias mkdir='mkdir -p'
 eval "$(starship init zsh)"
 
 # bun completions
-[ -s "/home/arpthef/.bun/_bun" ] && source "/home/arpthef/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export LIBVIRT_DEFAULT_URI="qemu:///system"
-
-#android sdk
-export ANDROID_HOME=$HOME/android/sdk
-export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
-export PATH=$ANDROID_HOME/emulator/:$PATH
-export PATH=$ANDROID_HOME/platform-tools/:$PATH
-
-#java home
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-21.0.6.0.7-1.fc41.x86_64/
-export PATH=$JAVA_HOME/bin:$PATH
-
-#flutter
-export PATH="$HOME/flutter/bin:$PATH"
-
-#sdk
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -1,0 +1,145 @@
+format = """
+[](first)\
+$username\
+$directory\
+(\
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $golang\
+    $haskell\
+    $java\
+    $julia\
+    $rust\
+)\
+[](fg:fourth bg:fifth)\
+$docker_context\
+[](fg:fifth bg:sixth)\
+(\
+    $git_branch\
+    $git_status\
+)\
+[](fg:sixth bg:seventh)\
+$time\
+$cmd_duration\
+$character\
+"""
+palette = "ruby"
+add_newline = true
+
+[palettes.ruby]
+first = "#272D37"      # left rounded segment, matches your previous 'black'
+second = "#F2EBFF"
+third = "#F2EBFF"
+fourth = "#F2EBFF"
+fifth = "#F2EBFF"
+sixth = "#F2EBFF"
+seventh = "#F2EBFF"
+eighth = "#F2EBFF"
+error = "#C1121F"
+black = "#272D37"
+white = "#F2EBFF"
+github = "#450920"
+
+[username]
+show_always = true
+style_user = "bg:first fg:white"
+style_root = "bg:first fg:white"
+format = '[$user]($style)[](fg:first bg:second)'
+
+[directory]
+style = "bg:second fg:black"
+format = "[   $path ]($style)($style)[$read_only]($read_only_style)[](fg:second bg:third)"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[directory.substitutions]
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[c]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[golang]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[python]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
+format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:third fg:black)'
+
+[conda]
+symbol = " "
+style = "bg:third fg:black"
+ignore_base = false
+format = '[$symbol ($environment) ]($style)'
+
+[haskell]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[java]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[julia]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[nodejs]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[rust]
+symbol = " "
+version_format = "${raw}"
+style = "bg:third fg:black"
+format = '[$symbol($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:fifth fg:black"
+format = '[$symbol $context ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:sixth fg:black"
+format = '[$symbol $branch ]($style)'
+
+[git_status]
+format = '([\($all_status$ahead_behind\) ]($style))'
+style = "bold bg:sixth fg:github"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:seventh fg:black"
+format = '[  $time]($style)[](fg:seventh bg:eighth)'
+
+[cmd_duration]
+style = "bg:eighth fg:black"
+format = '[  $duration ]($style)'
+
+[character]
+success_symbol = "[](fg:eighth bg:eighth)[](fg:eighth)"
+error_symbol = "[](fg:eighth bg:error)[](fg:error)"

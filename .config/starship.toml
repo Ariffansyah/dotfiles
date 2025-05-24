@@ -56,7 +56,7 @@ truncate_to_repo = true
 read_only ="  "
 
 [directory.substitutions]
-"Documents" = "  "
+"Documents" = " 󰈙 "
 "Downloads" = "  "
 "Music" = "  "
 "Pictures" = "  "

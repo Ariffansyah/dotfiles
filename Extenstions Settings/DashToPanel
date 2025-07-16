@@ -1,0 +1,24 @@
+[/]
+animate-appicon-hover=false
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+appicon-style='NORMAL'
+dot-position='BOTTOM'
+extension-version=68
+global-border-radius=2
+highlight-appicon-hover=true
+hotkeys-overlay-combo='TEMPORARILY'
+intellihide=false
+intellihide-hide-from-windows=false
+isolate-workspaces=false
+panel-anchors='{"INX-0x00000000":"MIDDLE"}'
+panel-element-positions='{"INX-0x00000000":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":false,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}'
+panel-lengths='{"INX-0x00000000":-1}'
+panel-positions='{"INX-0x00000000":"TOP"}'
+panel-sizes='{"INX-0x00000000":32}'
+prefs-opened=true
+primary-monitor='INX-0x00000000'
+trans-panel-opacity=0.5
+trans-use-custom-bg=false
+trans-use-custom-gradient=false
+trans-use-custom-opacity=true
+window-preview-title-position='TOP'

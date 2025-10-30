@@ -102,6 +102,13 @@ alias .5='cd ../../../../..'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
+alias winup='podman-compose --file ~/winapps/compose.yaml up'
+alias windown='podman-compose --file ~/winapps/compose.yaml down'
+alias winrestart='podman-compose --file ~/winapps/compose.yaml restart'
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -114,3 +121,14 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Gemini API
+export GEMINI_API_KEY=""
+
+export PATH="$PATH:/home/arp/.dotnet/tools"
+
+export NODE_EXTRA_CA_CERTS="$HOME/.local/share/mkcert/rootCA.pem"

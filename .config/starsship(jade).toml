@@ -1,0 +1,101 @@
+format = """
+[](jade_dark)\
+$username\
+$directory\
+(\
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $golang\
+    $haskell\
+    $java\
+    $julia\
+    $rust\
+)\
+[](fg:jade_mid bg:jade_light)\
+$docker_context\
+[](fg:jade_light bg:jade_bright)\
+(\
+    $git_branch\
+    $git_status\
+)\
+[](fg:jade_bright bg:jade_dark)\
+$time\
+[](fg:jade_dark bg:black)\
+$cmd_duration\
+$character\
+"""
+palette = "osaka_jade"
+add_newline = true
+
+[palettes.osaka_jade]
+jade_dark   = "#004D40" # Deep Forest
+jade_mid    = "#00695C" # Muted Emerald
+jade_light  = "#4DB6AC" # Soft Teal
+jade_bright = "#80CBC4" # Pale Sage
+black       = "#1A1B26" # Deep background (Match Ghostty)
+white       = "#F2EBFF" # Clean Off-white
+error       = "#CF6679"
+
+[username]
+show_always = true
+style_user = "bg:jade_dark fg:white"
+style_root = "bg:jade_dark fg:white"
+format = '[$user]($style)[](fg:jade_dark bg:jade_mid)'
+
+[directory]
+style = "bg:jade_mid fg:white"
+format = "[   $path ]($style)[$read_only]($read_only_style)[](fg:jade_mid bg:jade_mid)"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[directory.substitutions]
+"Documents" = " 󰈙 "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[c]
+symbol = " "
+style = "bg:jade_mid fg:white"
+format = '[$symbol($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:jade_mid fg:white"
+format = '[$symbol($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:jade_mid fg:white"
+format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:jade_mid fg:white)'
+
+[docker_context]
+symbol = " "
+style = "bg:jade_light fg:jade_dark" # DARK text on LIGHT background for contrast
+format = '[$symbol $context ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:jade_bright fg:jade_dark" # DARK text on LIGHT background for contrast
+format = '[$symbol $branch ]($style)'
+
+[git_status]
+style = "bold bg:jade_bright fg:jade_dark"
+format = '([\($all_status$ahead_behind\) ]($style))'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:jade_dark fg:white"
+format = '[   $time ]($style)'
+
+[cmd_duration]
+style = "bg:black fg:jade_bright"
+format = '[  $duration ]($style)'
+
+[character]
+success_symbol = "[](fg:black bg:black)[](fg:black)"
+error_symbol = "[](fg:black bg:error)[](fg:error)"

@@ -29,7 +29,7 @@ palette = "ruby"
 add_newline = true
 
 [palettes.ruby]
-first = "#272D37"      # left rounded segment, matches your previous 'black'
+first = "#272D37"   # left rounded segment, matches your previous 'black'
 second = "#F2EBFF"
 third = "#F2EBFF"
 fourth = "#F2EBFF"
@@ -53,7 +53,7 @@ style = "bg:second fg:black"
 format = "[   $path ]($style)($style)[$read_only]($read_only_style)[](fg:second bg:third)"
 truncation_symbol = "…/"
 truncate_to_repo = true
-read_only ="  "
+read_only = "  "
 
 [directory.substitutions]
 "Documents" = " 󰈙 "
@@ -77,7 +77,13 @@ format = '[$symbol($version) ]($style)'
 symbol = " "
 version_format = "${raw}"
 style = "bg:third fg:black"
-python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
+python_binary = [
+  "./venv/bin/python",
+  "./env/Scripts/python",
+  "python",
+  "python3",
+  "python2",
+]
 format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:third fg:black)'
 
 [conda]
@@ -105,7 +111,7 @@ style = "bg:third fg:black"
 format = '[$symbol($version) ]($style)'
 
 [nodejs]
-symbol = " "
+symbol = " "
 version_format = "${raw}"
 style = "bg:third fg:black"
 format = '[$symbol($version) ]($style)'
@@ -132,7 +138,7 @@ style = "bold bg:sixth fg:github"
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%R"                                     # Hour:Minute Format
 style = "bg:seventh fg:black"
 format = '[  $time]($style)[](fg:seventh bg:eighth)'
 

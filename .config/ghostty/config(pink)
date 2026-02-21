@@ -1,0 +1,30 @@
+background = #1a161a
+foreground = #ffffff
+selection-background = #ffafd7
+selection-foreground = #1a161a
+cursor-color = #ff79c6
+cursor-text = #1a161a
+
+# High-Contrast "Glow" Palette
+# Dark colors (0-7)
+palette = 0=#1a161a
+palette = 1=#ff5f87
+palette = 2=#ffb3ba
+palette = 3=#ffffaf
+palette = 4=#afafff
+palette = 5=#ff79c6
+palette = 6=#f78da7
+palette = 7=#ffffff
+
+palette = 8=#8e768e
+palette = 9=#ff87af
+palette = 10=#ffd9f0
+palette = 11=#ffffdf
+palette = 12=#dfdfff
+palette = 13=#ffafd7
+palette = 14=#ffb3ff
+palette = 15=#ffffff
+
+font-size = 12
+window-decoration = false
+background-opacity = 0.8
